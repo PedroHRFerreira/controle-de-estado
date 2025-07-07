@@ -9,10 +9,8 @@ export default defineComponent({
     <img src="/images/sales.jpeg" alt="placeholder" />
     <hr class="card--divider" />
     <div>
-      <AtomsText
-        text="Card Title"
-        @onclick="() => console.log('Card title clicked')"
-      />
+      <AtomsText size="medium" text="Card Title" />
+      <AtomsText size="extra-small" text="Card Title" />
     </div>
   </aside>
 </template>
