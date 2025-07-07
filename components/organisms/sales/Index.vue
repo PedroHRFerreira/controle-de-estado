@@ -6,6 +6,7 @@ export default defineComponent({
     const store = useSalesStore();
     const cards = computed(() => store.cards);
     const count = computed(() => store.cart.length);
+    const loading = computed(() => store.loading);
 
     const handleDisableAll = (index: number) => {
       const selectedCard = store.cards[index];
@@ -21,6 +22,7 @@ export default defineComponent({
       cards,
       count,
       handleDisableAll,
+      loading,
     };
   },
 });
@@ -28,7 +30,13 @@ export default defineComponent({
 
 <template>
   <article class="ecommerce">
-    <header class="ecommerce__header">
+    <div v-show="loading" class="loading-overlay">
+      <div class="loading-content">
+        <AtomsText size="large" text="Carregando produtos..." />
+      </div>
+    </div>
+
+    <header v-show="!loading" class="ecommerce__header">
       <div class="ecommerce__header-content">
         <AtomsText size="extra-large" text="E-commerce" />
         <div class="ecommerce__header-content--actions">
