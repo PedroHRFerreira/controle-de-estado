@@ -43,6 +43,7 @@
     }
     &--button--disabled {
       cursor: not-allowed;
+      pointer-events: none;
       padding: 4px 8px;
       border-radius: 8px;
       display: flex;
