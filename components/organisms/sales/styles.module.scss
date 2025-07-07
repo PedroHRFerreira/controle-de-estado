@@ -1,7 +1,35 @@
-.sales {
-  padding: 12px;
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: stretch;
+.ecommerce {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+
+  &__header {
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #1e1e2f, #2e2e3f);
+    border-radius: 12px;
+    color: #fff;
+
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    &-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__sales {
+    padding: 12px;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+  }
 }

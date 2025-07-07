@@ -79,11 +79,20 @@ export default defineComponent({
 </script>
 
 <template>
-  <article class="sales">
-    <MoleculesCard
-      :cards="cards"
-      @on-click="() => console.log('Card clicked')"
-    />
+  <article class="ecommerce">
+    <header class="ecommerce__header">
+      <div class="ecommerce__header-content">
+        <AtomsText size="extra-large" text="E-commerce" />
+        <div class="ecommerce__header-actions">
+          <AtomsText size="large" text="Produtos no carrinho:" />
+          <AtomsText size="medium" :text="count || 0" />
+        </div>
+      </div>
+    </header>
+
+    <section class="ecommerce__sales">
+      <MoleculesCard :cards="cards" />
+    </section>
   </article>
 </template>
 
