@@ -21,13 +21,18 @@ export default defineComponent({
         <AtomsText size="extra-small" :text="card.description" />
         <button
           :class="
-            card.disabled
-              ? 'card__content--button--disabled'
+            card.delete
+              ? 'card__content--button--delete'
               : 'card__content--button'
           "
           @click="$emit('on-click', index)"
         >
-          <AtomsText size="extra-small" text="Adicionar no carrinho" />
+          <AtomsText
+            size="extra-small"
+            :text="
+              card.delete ? 'Remover do carrinho' : 'Adicionar no carrinho'
+            "
+          />
         </button>
       </div>
     </section>
