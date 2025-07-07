@@ -21,7 +21,7 @@ export const useSalesStore = defineStore("sales", {
       this.cart.push(card);
     },
     disableCardByIndex(index: number) {
-      this.cards[index].disabled = true;
+      this.cards[index].delete = true;
       this.cards[index].remove = true;
     },
     async fetchCards() {
@@ -35,7 +35,7 @@ export const useSalesStore = defineStore("sales", {
           description:
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
-          disabled: false,
+          delete: false,
           remove: false,
         },
         {
@@ -43,7 +43,7 @@ export const useSalesStore = defineStore("sales", {
           description:
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
-          disabled: false,
+          delete: false,
           remove: false,
         },
         {
@@ -51,7 +51,7 @@ export const useSalesStore = defineStore("sales", {
           description:
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
-          disabled: false,
+          delete: false,
           remove: false,
         },
         {
@@ -59,7 +59,7 @@ export const useSalesStore = defineStore("sales", {
           description:
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
-          disabled: false,
+          delete: false,
           remove: false,
         },
         {
@@ -67,7 +67,7 @@ export const useSalesStore = defineStore("sales", {
           description:
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
-          disabled: false,
+          delete: false,
           remove: false,
         },
         {
@@ -75,7 +75,7 @@ export const useSalesStore = defineStore("sales", {
           description:
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
-          disabled: false,
+          delete: false,
           remove: false,
         },
         {
@@ -83,7 +83,7 @@ export const useSalesStore = defineStore("sales", {
           description:
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
-          disabled: false,
+          delete: false,
           remove: false,
         },
         {
@@ -91,7 +91,23 @@ export const useSalesStore = defineStore("sales", {
           description:
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
-          disabled: false,
+          delete: false,
+          remove: false,
+        },
+        {
+          title: "Card Title",
+          description:
+            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          image: "/images/sales.jpeg",
+          delete: false,
+          remove: false,
+        },
+        {
+          title: "Card Title",
+          description:
+            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          image: "/images/sales.jpeg",
+          delete: false,
           remove: false,
         },
       ];
