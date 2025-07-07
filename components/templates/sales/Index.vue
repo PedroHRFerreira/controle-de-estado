@@ -1,11 +1,9 @@
 <script lang="ts">
 export default defineComponent({
-  name: "IndexPage",
+  name: "TemplatesSales",
 });
 </script>
 
 <template>
-  <main>
-    <TemplatesSales />
-  </main>
+  <OrganismsSales />
 </template>
