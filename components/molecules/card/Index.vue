@@ -14,7 +14,7 @@ export default defineComponent({
 <template>
   <aside v-for="(card, index) in cards" :key="index">
     <section v-if="!card.remove" class="card">
-      <img :src="card.image" alt="imagem de um produto" />
+      <img width="230px" :src="card.image" alt="imagem de um produto" />
       <hr class="card--divider" />
       <div class="card__content">
         <AtomsText size="small" :text="card.title" />
@@ -25,7 +25,7 @@ export default defineComponent({
               ? 'card__content--button--disabled'
               : 'card__content--button'
           "
-          @click="$emit('on-click')"
+          @click="$emit('on-click', index)"
         >
           <AtomsText size="extra-small" text="Adicionar no carrinho" />
         </button>
