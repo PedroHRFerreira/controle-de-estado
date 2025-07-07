@@ -4,7 +4,7 @@ export const useSalesStore = defineStore("sales", {
   state: () => ({
     cards: [],
     cart: [],
-    selectedCard: null,
+    loading: true,
   }),
 
   actions: {
@@ -14,9 +14,6 @@ export const useSalesStore = defineStore("sales", {
     setCart(cart) {
       this.$state.cart = cart;
     },
-    setSelectedCard(card) {
-      this.$state.selectedCard = card;
-    },
     addToCart(card) {
       this.cart.push(card);
     },
@@ -25,6 +22,7 @@ export const useSalesStore = defineStore("sales", {
       this.cards[index].remove = true;
     },
     async fetchCards() {
+      this.loading = true;
       await new Promise((resolve) => {
         setTimeout(resolve, 2000);
       });
@@ -112,6 +110,7 @@ export const useSalesStore = defineStore("sales", {
         },
       ];
       this.setCards(cards);
+      this.loading = false;
     },
   },
 });
