@@ -1,29 +1,11 @@
 <script lang="ts">
 export default defineComponent({
   name: "MoleculesCard",
-  setup() {
-    const cards = computed(() => {
-      return [
-        {
-          title: "Card Title",
-          description:
-            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-          image: "/images/sales.jpeg",
-          disabled: false,
-        },
-        {
-          title: "Card Title",
-          description:
-            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-          image: "/images/sales.jpeg",
-          disabled: true,
-        },
-      ];
-    });
-
-    return {
-      cards,
-    };
+  props: {
+    cards: {
+      type: Array,
+      default: () => [],
+    },
   },
 });
 </script>
