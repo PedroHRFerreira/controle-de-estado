@@ -17,7 +17,7 @@ export default defineComponent({
       <img :src="card.image" alt="imagem de um produto" />
       <hr class="card--divider" />
       <div class="card__content">
-        <AtomsText size="medium" :text="card.title" />
+        <AtomsText size="small" :text="card.title" />
         <AtomsText size="extra-small" :text="card.description" />
         <button
           :class="

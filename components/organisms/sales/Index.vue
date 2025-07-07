@@ -10,7 +10,7 @@ export default defineComponent({
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
           disabled: false,
-          remove: true,
+          remove: false,
         },
         {
           title: "Card Title",
@@ -83,7 +83,7 @@ export default defineComponent({
     <header class="ecommerce__header">
       <div class="ecommerce__header-content">
         <AtomsText size="extra-large" text="E-commerce" />
-        <div class="ecommerce__header-actions">
+        <div class="ecommerce__header-content--actions">
           <AtomsText size="large" text="Produtos no carrinho:" />
           <AtomsText size="medium" :text="count || 0" />
         </div>

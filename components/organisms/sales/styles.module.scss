@@ -5,28 +5,29 @@
   gap: 32px;
 
   &__header {
-    padding: 12px 24px;
+    padding: 16px 24px;
     background: linear-gradient(90deg, #1e1e2f, #2e2e3f);
     border-radius: 12px;
     color: #fff;
 
     &-content {
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
 
-    &-actions {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      &--actions {
+        display: flex;
+        gap: 8px;
+        flex-direction: row;
+        align-items: flex-end;
+      }
     }
   }
 
   &__sales {
     padding: 12px;
+    height: 20px;
     display: grid;
     gap: 16px;
     grid-template-columns: repeat(4, 1fr);

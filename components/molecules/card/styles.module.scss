@@ -12,8 +12,8 @@
   padding: 16px 12px;
   max-width: 300px;
   height: auto;
-
   @include flex(center, "true");
+  gap: 8px;
 
   &--divider {
     width: 100%;
@@ -21,11 +21,12 @@
   }
   &__content {
     width: 100%;
-    height: fit-content;
     @include flex(center, "false");
+    gap: 16px;
 
     &--button {
       cursor: pointer;
+      height: 64px;
       padding: 4px 8px;
       border-radius: 8px;
       display: flex;
@@ -43,6 +44,7 @@
     }
     &--button--disabled {
       cursor: not-allowed;
+      height: 64px;
       pointer-events: none;
       padding: 4px 8px;
       border-radius: 8px;
