@@ -1,78 +1,26 @@
 <script lang="ts">
+import { useSalesStore } from "~/store/sales/useSalesStore";
 export default defineComponent({
   name: "OrganismsSales",
   setup() {
-    const cards = computed(() => {
-      return [
-        {
-          title: "Card Title",
-          description:
-            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-          image: "/images/sales.jpeg",
-          disabled: false,
-          remove: false,
-        },
-        {
-          title: "Card Title",
-          description:
-            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-          image: "/images/sales.jpeg",
-          disabled: true,
-          remove: false,
-        },
-        {
-          title: "Card Title",
-          description:
-            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-          image: "/images/sales.jpeg",
-          disabled: false,
-          remove: false,
-        },
-        {
-          title: "Card Title",
-          description:
-            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-          image: "/images/sales.jpeg",
-          disabled: true,
-          remove: false,
-        },
-        {
-          title: "Card Title",
-          description:
-            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-          image: "/images/sales.jpeg",
-          disabled: false,
-          remove: false,
-        },
-        {
-          title: "Card Title",
-          description:
-            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-          image: "/images/sales.jpeg",
-          disabled: true,
-          remove: false,
-        },
-        {
-          title: "Card Title",
-          description:
-            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-          image: "/images/sales.jpeg",
-          disabled: false,
-          remove: false,
-        },
-        {
-          title: "Card Title",
-          description:
-            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-          image: "/images/sales.jpeg",
-          disabled: true,
-          remove: false,
-        },
-      ];
+    const store = useSalesStore();
+    const cards = computed(() => store.cards);
+    const count = computed(() => store.cart.length);
+
+    const handleDisableAll = (index: number) => {
+      const selectedCard = store.cards[index];
+      store.disableCardByIndex(index);
+      store.addToCart(selectedCard);
+    };
+
+    onMounted(() => {
+      store.fetchCards();
     });
 
     return {
       cards,
+      count,
+      handleDisableAll,
     };
   },
 });
@@ -84,14 +32,21 @@ export default defineComponent({
       <div class="ecommerce__header-content">
         <AtomsText size="extra-large" text="E-commerce" />
         <div class="ecommerce__header-content--actions">
-          <AtomsText size="large" text="Produtos no carrinho:" />
-          <AtomsText size="medium" :text="count || 0" />
+          <img
+            src="/images/carrinho-de-compras.png"
+            width="32px"
+            height="32px"
+            alt="imagem de um carrinho"
+          />
+          <div class="ecommerce__header-content--actions--count">
+            <AtomsText size="extra-small" :text="String(count)" />
+          </div>
         </div>
       </div>
     </header>
 
     <section class="ecommerce__sales">
-      <MoleculesCard :cards="cards" />
+      <MoleculesCard :cards="cards" @on-click="handleDisableAll" />
     </section>
   </article>
 </template>
