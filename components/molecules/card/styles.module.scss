@@ -42,19 +42,26 @@
         color: rgba(11, 39, 65, 0.8);
       }
     }
-    &--button--disabled {
-      cursor: not-allowed;
+    &--button--delete {
       height: 64px;
-      pointer-events: none;
       padding: 4px 8px;
-      border-radius: 8px;
+      background: linear-gradient(145deg, #dc3545, #c82333);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: rgba(25, 59, 92, 0.3);
-      transition: border 0.5s ease-in-out;
-      border: 2px solid #1c1b1b;
-      color: rgba(11, 39, 65, 0.8);
+      gap: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background: linear-gradient(145deg, #c82333, #bd2130);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      }
     }
   }
 }
