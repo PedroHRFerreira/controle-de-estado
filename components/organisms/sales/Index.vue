@@ -10,6 +10,7 @@ export default defineComponent({
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
           disabled: false,
+          remove: true,
         },
         {
           title: "Card Title",
@@ -17,6 +18,55 @@ export default defineComponent({
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
           disabled: true,
+          remove: false,
+        },
+        {
+          title: "Card Title",
+          description:
+            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          image: "/images/sales.jpeg",
+          disabled: false,
+          remove: false,
+        },
+        {
+          title: "Card Title",
+          description:
+            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          image: "/images/sales.jpeg",
+          disabled: true,
+          remove: false,
+        },
+        {
+          title: "Card Title",
+          description:
+            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          image: "/images/sales.jpeg",
+          disabled: false,
+          remove: false,
+        },
+        {
+          title: "Card Title",
+          description:
+            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          image: "/images/sales.jpeg",
+          disabled: true,
+          remove: false,
+        },
+        {
+          title: "Card Title",
+          description:
+            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          image: "/images/sales.jpeg",
+          disabled: false,
+          remove: false,
+        },
+        {
+          title: "Card Title",
+          description:
+            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          image: "/images/sales.jpeg",
+          disabled: true,
+          remove: false,
         },
       ];
     });
@@ -29,7 +79,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <article>
+  <article class="sales">
     <MoleculesCard
       :cards="cards"
       @on-click="() => console.log('Card clicked')"
