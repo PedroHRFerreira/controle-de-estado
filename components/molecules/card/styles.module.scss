@@ -1,0 +1,16 @@
+.card {
+  border: 1px solid #1c1b1b;
+  padding: 16px 12px;
+  max-width: 300px;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &--divider {
+    width: 100%;
+    border: 1px solid #1c1b1b;
+  }
+}

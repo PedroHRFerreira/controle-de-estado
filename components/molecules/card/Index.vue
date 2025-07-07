@@ -5,12 +5,11 @@ export default defineComponent({
 </script>
 
 <template>
-  <aside>
-    <img src="/images/placeholder.png" alt="placeholder" />
+  <aside class="card">
+    <img src="/images/sales.jpeg" alt="placeholder" />
+    <hr class="card--divider" />
     <div>
       <AtomsText
-        size="large"
-        types="primary"
         text="Card Title"
         @onclick="() => console.log('Card title clicked')"
       />
@@ -19,5 +18,5 @@ export default defineComponent({
 </template>
 
 <style scoped lang="scss">
-@import "styles.module.scss";
+@use "styles.module.scss" as *;
 </style>

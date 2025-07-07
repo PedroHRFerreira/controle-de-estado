@@ -6,6 +6,6 @@ export default defineComponent({
 
 <template>
   <div>
-    <AtomsText text="Hello World" />
+    <MoleculesCard />
   </div>
 </template>
