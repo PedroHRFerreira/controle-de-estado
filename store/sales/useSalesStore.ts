@@ -17,6 +17,13 @@ export const useSalesStore = defineStore("sales", {
     setSelectedCard(card) {
       this.$state.selectedCard = card;
     },
+    addToCart(card) {
+      this.cart.push(card);
+    },
+    disableCardByIndex(index: number) {
+      this.cards[index].disabled = true;
+      this.cards[index].remove = true;
+    },
     async fetchCards() {
       await new Promise((resolve) => {
         setTimeout(resolve, 2000);
@@ -36,7 +43,7 @@ export const useSalesStore = defineStore("sales", {
           description:
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
-          disabled: true,
+          disabled: false,
           remove: false,
         },
         {
@@ -52,7 +59,7 @@ export const useSalesStore = defineStore("sales", {
           description:
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
-          disabled: true,
+          disabled: false,
           remove: false,
         },
         {
@@ -68,7 +75,7 @@ export const useSalesStore = defineStore("sales", {
           description:
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
-          disabled: true,
+          disabled: false,
           remove: false,
         },
         {
@@ -84,7 +91,7 @@ export const useSalesStore = defineStore("sales", {
           description:
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: "/images/sales.jpeg",
-          disabled: true,
+          disabled: false,
           remove: false,
         },
       ];
