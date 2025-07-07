@@ -5,11 +5,8 @@
 }
 
 .type-text {
-  width: auto;
-  height: auto;
   display: flex;
   text-align: left;
-  padding: 5px;
   font-family: "Poppins", sans-serif;
 
   &.extra-large {
@@ -29,7 +26,7 @@
   }
 
   &.extra-small {
-    @include font-size(16px, 12.2px, 600);
+    @include font-size(16px, 16.2px, 600);
   }
 
   &.default {
