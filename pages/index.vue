@@ -5,5 +5,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>Página Principal</div>
+  <div>
+    <AtomsText text="Hello World" />
+  </div>
 </template>

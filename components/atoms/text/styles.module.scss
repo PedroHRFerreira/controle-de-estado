@@ -1,0 +1,58 @@
+@mixin font-size($size, $line-height, $weight) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+}
+
+.type-text {
+  width: auto;
+  height: auto;
+  display: flex;
+  text-align: left;
+  padding: 5px;
+
+  &.extra-large {
+    @include font-size(28px, 28.8px, 700);
+  }
+
+  &.large {
+    @include font-size(26px, 25.6px, 600);
+  }
+
+  &.medium {
+    @include font-size(24px, 22.4px, 600);
+  }
+
+  &.small {
+    @include font-size(22px, 19.2px, 600);
+  }
+
+  &.extra-small {
+    @include font-size(16px, 12.2px, 600);
+  }
+
+  &.default {
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      color: aqua;
+    }
+  }
+
+  &.primary {
+    color: aqua;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &.dark {
+    color: var(--backgroundModal);
+
+    &:hover {
+      color: var(--neutralDarkGrey2);
+    }
+  }
+}
