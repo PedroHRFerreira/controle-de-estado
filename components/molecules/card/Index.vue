@@ -7,6 +7,7 @@ export default defineComponent({
       default: () => [],
     },
   },
+  emits: ["on-click"],
 });
 </script>
 
